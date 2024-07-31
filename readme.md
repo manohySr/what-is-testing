@@ -1,38 +1,77 @@
-## Testing
+## 🚀 Testing
 
-- your project will scale - you will add more code to it
-- when code grow, it will be more difficult to degub
-  everything is somehow tied and if you add some code (bad code in intention to improve performance) it may break the whole thing
-- Here come testing
-  Testing help us to add code without having the fear to break something
+- Your project will scale 🚀, and you will add more code to it.
+- As code grows, debugging becomes more challenging. Everything is somehow interconnected, and adding some code (even with good intentions to improve performance) may break the whole thing. 🐞🔧
+- Enter **Testing**: Testing helps us to add code without the fear of breaking something. 🛡️
 
-## Types of tests
+## 🔍 Types of Tests
 
-### Unit tests
+### 🧩 Unit Tests
 
-How a piece of code is excepted to work
-What a (one) function is excepted to work
-Don't mind other function
+- How a piece of code is expected to work.
+- Focus on one function at a time.
+- Don’t worry about other functions.
 
-### Integrations tests
+### 🔗 Integration Tests
 
-How different piece of code is excepted to work together
-Liason btw some function
-Cross communication
+- How different pieces of code are expected to work together.
+- Liaison between some functions.
+- Cross communication validation.
 
-### Automation tests
+### 🤖 Automation Tests
 
-UI test
-Test in real life scenario (human test or robot test)
+- UI tests.
+- Test in real-life scenarios (human test or robot test).
 
-## Testing libraries
+## 🛠️ Testing Libraries
 
-- Jest
-- Cypress
-- Jasmine
-- Mocha
+- **[Jest](https://jestjs.io/)**
+- **[Cypress](https://www.cypress.io/)**
+- **[Jasmine](https://jasmine.github.io/)**
+- **[Mocha](https://mochajs.org/)**
 
-- Test assertion
-- Test runner
-- Stub
-- Code coverage
+## 🧪 What We Expect in Tests
+
+### 🔍 Test Assertion
+
+Test assertions are the conditions or boolean expressions used within a test case to verify that the code behaves as expected. Assertions compare the actual output of the code with the expected output. If the comparison fails, the test fails.
+
+**Example:**
+
+```javascript
+const sum = (a, b) => a + b;
+const result = sum(2, 3);
+assert.equal(result, 5); // This is an assertion
+```
+
+### 🏃 Test Runner
+
+A test runner is a tool that runs tests and reports the results. It organizes test execution, handles setup and teardown, and provides feedback on which tests passed or failed. Popular test runners include Jest, Mocha, and Jasmine.
+
+**Example:**
+
+```javascript
+jest // Command to run tests using Jest
+```
+
+### 📊 Code Coverage
+
+Code coverage measures how much of your code is executed while running tests. It helps identify which parts of your codebase are not tested and ensures that your tests cover all possible execution paths.
+
+**Example:**
+
+```javascript
+jest --coverage // Command to run tests with code coverage reporting in Jest
+```
+
+### 🔍 Spy
+
+A spy allows you to track the calls to a function and its arguments without replacing the function. It's useful for verifying that certain functions are called with the expected arguments.
+
+**Example with Sinon:**
+
+```javascript
+const spy = sinon.spy(myObject, 'myMethod');
+myObject.myMethod('test');
+assert(spy.calledWith('test'));
+```
